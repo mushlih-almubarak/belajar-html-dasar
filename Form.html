@@ -8,21 +8,35 @@
         <!--Atribut "for" digunakan untuk memberi label pada elemen yang memiliki "id" yang sama dengan nilai yang ada di "for"-->
         <label for="namaPenguna">Username: </label>
         <input type="text" id="namaPengguna">
-        <br>
+        <br><br>
         <label for="kataSandi">Password: </label>
         <input type="password" id="kataSandi">
-        <br>
+        <br><br>
         <label>jenis Kelamin:</label>
         <br>
         <!--Atribut "name" digunakan untuk menjadikan hanya bisa diklik salah satunya-->
         <input type="radio" id="pria" name="jenisKelamin"><label for="pria">Pria</label>
         <input type="radio" id="wanita" name="jenisKelamin"><label for="wanita">Wanita</label>
+        <br><br>
+        <label>Hobi</label>
         <br>
-        <label>Hobi</label><br>
         <input type="checkbox" id="olahraga"><label for="olahraga">Olahraga</label>
         <input type="checkbox" id="makan"><label for="makan">Makan</label>
         <input type="checkbox" id="ngoding"><label for="ngoding">Olahraga</label>
+        <br><br>
+        <label for="dropdown">Daerah Asal</label>
         <br>
+        <select id="dropdown">
+            <option>Jakarta</option>
+            <option>Medan</option>
+            <option>Kalimantan</option>
+        </select>
+        <br><br>
+        <!--Tuliskan default value textarea di dalam tagnya-->
+        <label for="pesan">Pesan Anda</label>
+        <br>
+        <textarea id="pesan"></textarea>
+        <br><br>
         <button type="submit">Kirim</button>
         <button type="reset">Reset Data</button>
     </form>
