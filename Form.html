@@ -13,13 +13,30 @@
         <input type="text" id="belakang" placeholder="Masukkan Nama Belakang Anda">
         <br><br>
         <label for="namaPenguna">Username: </label>
-        <input type="text" id="namaPengguna">
+        <!--Utk membuat isian otomatis (default), gunakan atribut "value"-->
+        <!--Gunakan atribut "minlength="angka" dan maxlength="angka" untuk mengatur berapa karakter yang diizinkan-->
+        <input type="text" id="namaPengguna" value="mushlih_31" minlength="4" maxlength="12">
         <br><br>
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Masukkan Email Anda">
+        <!--Tambahkan atribut "required" jika ingin bidang itu wajib diisi-->
+        <input type="email" id="email" placeholder="Masukkan Email Anda" required>
         <br><br>
+        <!--Title utk menunjukkan kesalahannya-->
+        <!-- Kode ^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$ =  Terdiri dari setidaknya satu angka, satu karakter khsusus, dan satu huruf besar dan kecil.
+             Kode .{4,12}= Minimal 4 karakter maksimal 12 karakter -->
         <label for="kataSandi">Password: </label>
-        <input type="password" id="kataSandi" placeholder="Masukkan Password Anda">
+        <input type="password" id="kataSandi" placeholder="Masukkan Password Anda" 
+        pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$"
+        title="Minimal 4 karakter maksimal 12 karakter, terdiri dari setidaknya satu angka, satu karekter khusus, dan satu huruf besar dan kecil">
+        <br><br>
+        <label for="wa">WhatsApp:</label>
+        <br>
+        <input type="tel" id="wa" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" title="Hanya angka yang diizinkan">
+        <br><br>
+        <label for="umur">Umur</label>
+        <br>
+        <!--Gunakan atribut "min="angka" max="angka" utk menentukan angka dari dan sampai berapa yang boleh diisi  -->
+        <input type="number" id="umur" min="10" max="55">
         <br><br>
         <label>jenis Kelamin:</label>
         <br>
@@ -29,8 +46,9 @@
         <br><br>
         <label>Hobi</label>
         <br>
+        <!--Tambahkan atribut "checked" jika ingin bagian itu tercentang otomatis-->
         <input type="checkbox" id="olahraga"><label for="olahraga">Olahraga</label>
-        <input type="checkbox" id="makan"><label for="makan">Makan</label>
+        <input type="checkbox" id="makan" checked><label for="makan">Makan</label>
         <input type="checkbox" id="ngoding"><label for="ngoding">Olahraga</label>
         <br><br>
         <label for="dropdown">Daerah Asal</label>
@@ -41,10 +59,20 @@
             <option>Kalimantan</option>
         </select>
         <br><br>
+        <label for="jangan">Jangan Diisi</label>
+        <br>
+        <input type="text" id="jangan" value="Teks default" disabled>
+        <br><br>
+        <label for="baca">Baca Saja</label>
+        <br>
+        <input type="text" id="baca" readonly value="Hanya bisa dibaca, tidak bisa dirubah">
+        <br><br>
         <!--Tuliskan default value textarea di dalam tagnya-->
         <label for="pesan">Pesan Anda</label>
         <br>
-        <textarea id="pesan"></textarea>
+        <!--Tidak perlu pakai kode "input type"-->
+        <!--maxlength="angka" = Utk membatasi jumlah karakter yang bisa ditulis di bidang-->
+        <textarea id="pesan" maxlength="50"></textarea>
         <br><br>
         <button type="submit">Kirim</button>
         <button type="reset">Reset Data</button>
