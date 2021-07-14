@@ -7,10 +7,10 @@
     <form>
         <!--Atribut "for" digunakan untuk memberi label pada elemen yang memiliki "id" yang sama dengan nilai yang ada di "for"-->
         <label for="depan">Nama Depan:</label>
-        <input type="text" id="depan" placeholder="Masukkan Nama Depan Anda">
+        <input type="text" id="depan" placeholder="Masukkan Nama Depan Anda" autocomplete="off"> <!-- autocomplete: Agar tidak ada saran pengetikan di inputnya-->
         <br>
         <label for="belakang">Nama Belakang:</label>
-        <input type="text" id="belakang" placeholder="Masukkan Nama Belakang Anda">
+        <input type="text" id="belakang" placeholder="Masukkan Nama Belakang Anda" autofocus> <!-- Autofocus: Agar inputnya langsung seperti setelah diklik -->
         <br><br>
         <label for="namaPenguna">Username: </label>
         <!--Utk membuat isian otomatis (default), gunakan atribut "value"-->
@@ -19,7 +19,8 @@
         <br><br>
         <label for="email">Email</label>
         <!--Tambahkan atribut "required" jika ingin bidang itu wajib diisi-->
-        <input type="email" id="email" placeholder="Masukkan Email Anda" required>
+        <input type="email" id="email" placeholder="Masukkan Email Anda" required size="50"> <!-- size: ukuran inputnya-->
+        <br><br>
         <br><br>
         <!--Title utk menunjukkan kesalahannya-->
         <!--Atribut "pattern" untuk membatasi karakter apa saja yang boleh digunakan untuk diisi pada bidang tsb 
