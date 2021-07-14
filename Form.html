@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Belajar Membuat Formulir Pada HTML</title>
 </head>
+
 <body>
     <form>
         <!--Atribut "for" digunakan untuk memberi label pada elemen yang memiliki "id" yang sama dengan nilai yang ada di "for"-->
         <label for="depan">Nama Depan:</label>
-        <input type="text" id="depan" placeholder="Masukkan Nama Depan Anda" autocomplete="off"> <!-- autocomplete: Agar tidak ada saran pengetikan di inputnya-->
+        <input type="text" id="depan" placeholder="Masukkan Nama Depan Anda" autocomplete="off">
+        <!-- autocomplete: Agar tidak ada saran pengetikan di inputnya-->
         <br>
         <label for="belakang">Nama Belakang:</label>
-        <input type="text" id="belakang" placeholder="Masukkan Nama Belakang Anda" autofocus> <!-- Autofocus: Agar inputnya langsung seperti setelah diklik -->
+        <input type="text" id="belakang" placeholder="Masukkan Nama Belakang Anda" autofocus>
+        <!-- Autofocus: Agar inputnya langsung seperti setelah diklik -->
         <br><br>
         <label for="namaPenguna">Username: </label>
         <!--Utk membuat isian otomatis (default), gunakan atribut "value"-->
@@ -19,17 +23,20 @@
         <br><br>
         <label for="email">Email</label>
         <!--Tambahkan atribut "required" jika ingin bidang itu wajib diisi-->
-        <input type="email" id="email" placeholder="Masukkan Email Anda" required size="50"> <!-- size: ukuran inputnya-->
-        <br><br>
+        <input type="email" id="email" placeholder="Masukkan Email Anda" required size="50">
+        <!-- size: ukuran inputnya-->
+
+        <!--hidden = fieldnya tidak muncul tapi tetap ada (tidak kelihatan)-->
+        <input type="hidden" id="sembunyi" value="Tersembunyi">
         <br><br>
         <!--Title utk menunjukkan kesalahannya-->
         <!--Atribut "pattern" untuk membatasi karakter apa saja yang boleh digunakan untuk diisi pada bidang tsb 
             Value ^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$ =  Terdiri dari setidaknya satu angka, satu karakter khsusus, dan satu huruf besar dan kecil.
             Value .{4,12}= Minimal 4 karakter maksimal 12 karakter -->
         <label for="kataSandi">Password: </label>
-        <input type="password" id="kataSandi" placeholder="Masukkan Password Anda" 
-        pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$"
-        title="Minimal 4 karakter maksimal 12 karakter, terdiri dari setidaknya satu angka, satu karekter khusus, dan satu huruf besar dan kecil">
+        <input type="password" id="kataSandi" placeholder="Masukkan Password Anda"
+            pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$"
+            title="Minimal 4 karakter maksimal 12 karakter, terdiri dari setidaknya satu angka, satu karekter khusus, dan satu huruf besar dan kecil">
         <br><br>
         <label for="wa">WhatsApp:</label>
         <br>
@@ -80,4 +87,5 @@
         <button type="reset">Reset Data</button>
     </form>
 </body>
+
 </html>
