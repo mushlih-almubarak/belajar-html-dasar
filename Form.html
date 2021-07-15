@@ -83,6 +83,11 @@
         <!--maxlength="angka" = Utk membatasi jumlah karakter yang bisa ditulis di bidang-->
         <textarea id="pesan" maxlength="50"></textarea>
         <br><br>
+        <label for="upload">Upload file</label>
+        <!--Atribut accept: hanyak ekstensi file tertentu yang boleh di upload, tapi ini TIDAK memvalidasi ekstensi filenya ketika diupload, hanya mempersempit file-file ketika jendela "Pilih file" dibuka-->
+        <!--Atribut multiple: membolehkan user mengupload beberapa file sekaligus-->
+        <input type="file" accept="image/*, video/.mp4" multiple>
+        <br><br>
         <button type="submit">Kirim</button>
         <button type="reset">Reset Data</button>
     </form>
